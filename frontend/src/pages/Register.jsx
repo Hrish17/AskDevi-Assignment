@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Register.css';
+import domain from '../domain';
 
-const API_BASE = 'http://localhost:8000/api';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -42,7 +42,7 @@ const Register = () => {
 
         setLoading(true);
         try {
-            const res = await fetch(`${API_BASE}/register/`, {
+            const res = await fetch(`${domain}/register/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

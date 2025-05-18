@@ -1,11 +1,8 @@
-// src/components/Chat.jsx
-
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Chat.css';
 import deviLogo from '../assets/devi.webp'; // Make sure this exists in your assets
-
-const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:8000/api';
+import domain from "../domain";
 
 const Chat = () => {
     const navigate = useNavigate();
@@ -31,7 +28,7 @@ const Chat = () => {
     useEffect(() => {
         if (!sessionId) return;
 
-        fetch(`${API_BASE}/chat-history/${sessionId}/`)
+        fetch(`${domain}/chat-history/${sessionId}/`)
             .then(res => {
                 if (!res.ok) throw new Error('Failed to load chat history');
                 return res.json();
@@ -70,7 +67,7 @@ const Chat = () => {
         const userMsg = { sender: 'user', text: input.trim() };
         setChatHistory(prev => [...prev, userMsg]);
 
-        fetch(`${API_BASE}/chat/${sessionId}/`, {
+        fetch(`${domain}/chat/${sessionId}/`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: input.trim() })

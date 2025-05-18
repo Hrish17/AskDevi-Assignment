@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Register.css';
-
-const API_BASE = 'http://localhost:8000/api';
+import domain from '../domain';
 
 const UpdateBirthDetails = () => {
     const navigate = useNavigate();
@@ -60,7 +59,7 @@ const UpdateBirthDetails = () => {
 
         setLoading(true);
         try {
-            const res = await fetch(`${API_BASE}/update-birth-details/${sessionId}/`, {
+            const res = await fetch(`${domain}/update-birth-details/${sessionId}/`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
