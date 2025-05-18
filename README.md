@@ -24,6 +24,8 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+- backend folder should have .env file with ASTROLOGYAPI_USERID, ASTROLOGYAPI_KEY, HUGGINGFACE_API_KEY, DJANGO_SECRET_KEY
+
 ### 3. Frontend Setup :
 
 In another terminal,
@@ -63,5 +65,3 @@ Based on these excerpts and the user's chart, provide an insightful response in 
 Give general answers. Don't use astrological terms. Speak in humane way.
 
 ```
-
-- backend folder should have .env file with ASTROLOGYAPI_USERID, ASTROLOGYAPI_KEY, HUGGINGFACE_API_KEY, DJANGO_SECRET_KEY
