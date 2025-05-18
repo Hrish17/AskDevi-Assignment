@@ -64,4 +64,4 @@ Give general answers. Don't use astrological terms. Speak in humane way.
 
 ```
 
-### backend folder should have .env file with ASTROLOGYAPI_USERID, ASTROLOGYAPI_KEY, HUGGINGFACE_API_KEY. 
+### backend folder should have .env file with ASTROLOGYAPI_USERID, ASTROLOGYAPI_KEY, HUGGINGFACE_API_KEY, DJANGO_SECRET_KEY
