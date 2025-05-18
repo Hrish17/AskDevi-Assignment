@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.home-container {
+    min-height: 100vh;
+    background-color: #23003a;
+    background-image: radial-gradient(#ffffff11 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: white;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background-color: #23003a;
+    border-bottom: 1px solid #3c1d4f;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a,
+.nav-links span {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.devi-image {
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px #ffc107);
+    }
+
+    to {
+        filter: drop-shadow(0 0 15px #ffc107);
+    }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #cfcfcf;
+    margin-bottom: 2rem;
+}
+
+.chat-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2e004c;
+    text-decoration: none;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #fff3d1, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
