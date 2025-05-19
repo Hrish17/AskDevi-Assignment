@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Chat.css';
-import deviLogo from '../assets/devi.webp'; // Make sure this exists in your assets
+import deviLogo from '../assets/devi.webp';
 import domain from "../domain";
 
 const Chat = () => {
@@ -34,7 +34,6 @@ const Chat = () => {
                 return res.json();
             })
             .then(data => {
-                // Transform each ChatMessage into 2 entries: user + bot
                 const formattedHistory = data.flatMap(msg => [
                     { sender: 'user', text: msg.user_message },
                     { sender: 'bot', text: msg.devi_response }

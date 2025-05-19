@@ -76,13 +76,11 @@ def retrieve_chunks(question, k=3):
 
 
 def build_prompt(user_question, birth_details, chunks):
-    # Parse date_of_birth if it's a string
     dob = birth_details.date_of_birth
     if isinstance(dob, str):
         dob = datetime.strptime(dob, "%Y-%m-%d").date()
 
     tob = birth_details.time_of_birth
-    # similarly parse time_of_birth if string
     if isinstance(tob, str):
         tob = datetime.strptime(tob, "%H:%M:%S").time()
 

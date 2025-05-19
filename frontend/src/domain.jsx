@@ -1,2 +1,2 @@
-const domain = 'http://localhost:8000/api';
+const domain = 'https://askdevi-assignment.onrender.com/api';
 export default domain;
